@@ -58,53 +58,53 @@ The modal.js rely on pure js,you can run it without any frame.
 
 ## Options
 
-1. for function `set()`
+#### function `set()`
 
-    | Property      | Type   | Default value | Description                     |
-    | ------------- | ------ | ------------- | ------------------------------- |
-    | type          | string | toast         | modal type.                     |
-    | content_title | string |               | modal title.                    |
-    | content_msg   | string |               | modal content message.          |
-    | cancel_text   | string | 取消          | text of cancel button.          |
-    | confirm_text  | string | 确定          | text of confirm button.         |
-    | need_rebuild  | number | 0             | is modal need rebuild.          |
-    | toast_time    | number | 1500          | show time while type = 'toast'. |
-    | animation     | string | fade          | animation.                      |
+| Property      | Type   | Default value | Description                     |
+| ------------- | ------ | ------------- | ------------------------------- |
+| type          | string | toast         | modal type.                     |
+| content_title | string |               | modal title.                    |
+| content_msg   | string |               | modal content message.          |
+| cancel_text   | string | 取消          | text of cancel button.          |
+| confirm_text  | string | 确定          | text of confirm button.         |
+| need_rebuild  | number | 0             | is modal need rebuild.          |
+| toast_time    | number | 1500          | show time while type = 'toast'. |
+| animation     | string | fade          | animation.                      |
 
-    * legal value of type
+* legal value of `type`
 
-      | Value   | Description                                  |
-      | ------- | :------------------------------------------- |
-      | toast   | no button, timeout with 1500ms.              |
-      | alert   | with only confirm button, no timeout.        |
-      | confirm | with cancel and confirm buttons, no timeout. |
+  | Value   | Description                                  |
+  | ------- | :------------------------------------------- |
+  | toast   | no button, timeout with 1500ms.              |
+  | alert   | with only confirm button, no timeout.        |
+  | confirm | with cancel and confirm buttons, no timeout. |
 
-    * legal value of content_title
+* legal value of `content_title`
 
-      | Value | Description            |
-      | ----- | ---------------------- |
-      | none  | don't need modal title |
-      
-    * legal value of need_rebuild
+  | Value | Description            |
+  | ----- | ---------------------- |
+  | none  | don't need modal title |
+  
+* legal value of `need_rebuild`
 
-      | Value | Description                                          |
-      | ----- | ---------------------------------------------------- |
-      | 0     | use modal default style.                             |
-      | 1     | rebuild your style modal, you can rewrite HTML, CSS. |
+  | Value | Description                                          |
+  | ----- | ---------------------------------------------------- |
+  | 0     | use modal default style.                             |
+  | 1     | rebuild your style modal, you can rewrite HTML, CSS. |
 
-    * legal value animation
+* legal value of `animation`
 
-      | Value | Description                        |
-      | ----- | ---------------------------------- |
-      | fade  | modal fade slowly.                 |
-      | pop   | modal pop up and fall down slowly. |
+  | Value | Description                        |
+  | ----- | ---------------------------------- |
+  | fade  | modal fade slowly.                 |
+  | pop   | modal pop up and fall down slowly. |
 
-2. for function  `show()`
+#### function `show()`
 
-    | Property | Type     | Default value | Description            |
-    | -------- | -------- | ------------- | ---------------------- |
-    | success  | function |               | callback after success |
-    | fail     | function |               | callback after fail    |
+| Property | Type     | Default value | Description            |
+| -------- | -------- | ------------- | ---------------------- |
+| success  | function |               | callback after success |
+| fail     | function |               | callback after fail    |
 
 
 
@@ -112,11 +112,11 @@ The modal.js rely on pure js,you can run it without any frame.
 
 If you use the default style, modal.js provider the className for you.
 
-### alert type
+#### alert type
 
 modal.js provide className `.modal-btn-confirm` in confirm button.
 
-### confirm type
+#### confirm type
 
 modal.js provide classNmae `.modal-btn-cancel` and `.modal-btn-confirm` .
 
@@ -145,14 +145,16 @@ cancelBtn.addEventListener('click', function() {
   .modal-button
   .modal-btn-cancel
   .modal-btn-confirm
+  @keyframes fade
+  @keyframes pop
+  @keyframes mask-show
   ```
 
   make sure **not** to use them in other place.
 
-* If you use the default style, **don't** modify the basic html ans css in *Quict Start*.
+* If you use the default style, **don't** modify the html ans css in *Quict Start*.
 
 * call function `set()` **before** use `show()`,  otherwise the modal will not work.
-* animation is testing now. 
 
 
 
@@ -188,5 +190,5 @@ Modal.hide();
 
 2. Q: How to rebuild?
 
-   A: use the property `need_rebuild: 1` in `set()`. Then you can modify html and css you like.
+   A: Use the property `need_rebuild: 1` in `set()`. Then you can modify html and css you like.
 
