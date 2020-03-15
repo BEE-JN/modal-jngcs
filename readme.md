@@ -130,6 +130,17 @@ cancelBtn.addEventListener('click', function() {
 })
 ```
 
+If you use mui to listen like this:
+
+```javascript
+mui('#modal').on('tap', '.modal-btn-cancel', function() {
+	console.log('cancel');
+	Modal.hide();
+});
+```
+
+Remember to use `mui().off()`to cancel the listener after your work, or the code in listener will be called many times.
+
 
 
 ## Example
@@ -157,9 +168,9 @@ Modal.hide();
 
 
 
-##  Attention 
+##  Attention ☆
 
-* the id and className modal.js used:
+* The Id and className modal.js used:
 
   ```html
   #mask
@@ -179,7 +190,9 @@ Modal.hide();
 
 * If you use the default style, **don't** modify the html ans css in *Quict Start*.
 
-* call function `set()` **before** use `show()`,  otherwise the modal will not work.
+* Call function `set()` **before** use `show()`,  otherwise the modal will not work.
+
+* If you use mui to listen, remember to use `mui().off()`to cancel the listener, or the code in listener will be called many times.
 
 
 
