@@ -133,7 +133,6 @@
 			try{
 				document.getElementById('mask').style.display = 'flex';
 				document.getElementById('modal').style.display = 'flex';
-				callback.success('success');  // 如果上述代码无错误，则回调success
 			} catch(e) {
 				//TODO handle the exception
 				res = e.message;
@@ -142,6 +141,7 @@
 			} finally {
 				isSet = 0;  // 重新将isSet置为0，否则相同域其他modal可以不调用set直接show
 			}
+			callback.success('success');  // 如果上述代码无错误，则回调success
 		},
 		
 		
