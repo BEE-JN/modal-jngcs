@@ -10,7 +10,7 @@
 		confirm_text: '确定',  // 确认按钮文字，仅当type=alert|confirm时有效
 		need_rebuild: 0,  // 是否需要订制并覆盖，1为订制，0为采用插件默认配置
 		toast_time: 1500,  // toast显示市场，仅当type=toast时有效
-		animation: 'linear'  // modal显示动画
+		animation: 'fade'  // modal显示关闭动画
 	};
 
 	// 默认回调函数
@@ -48,6 +48,7 @@
 			// dom元素获取
 			var cancelBtnHtml = '<span class="modal-btn-cancel">' + options.cancel_text + '</span>';
 			var confirmBtnHtml = '<span class="modal-btn-confirm">' + options.confirm_text + '</span>';
+			var modal = document.getElementById('modal');
 			var modalBtnRow = document.getElementsByClassName('modal-button')[0];
 			var modalTitle = document.getElementsByClassName('modal-title')[0];
 			var modalMsg = document.getElementsByClassName('modal-msg')[0];
@@ -88,22 +89,19 @@
 					setTimeout(function() {
 						api.hide();
 					}, options.toast_time);
-			}	
+			}
 			
-			// if (options.type !== 'alert' && options.type !== 'confirm' && options.type !== 'toast') {
-			// 	options.type = 'toast';
-			// }
-			// if (options.type === 'alert') {
-			// 	modalBtnRow.innerHTML = confirmBtnHtml;
-			// } else if (options.type === 'confirm') {
-			// 	modalBtnRow.innerHTML = cancelBtnHtml + confirmBtnHtml;
-			// } else if (options.type === 'toast') {
-			// 	setTimeout(function() {
-			// 		api.hide();
-			// 	}, options.toast_time);
-			// } else {
-			// 	console.error('error type:' + options.type);
-			// }
+			// 根据选项参数设置显示动画
+			switch (options.animation) {
+				case 'fade':
+					modal.style.animation = 'fade 0.3s ease';
+					break;
+				case 'pop':
+					modal.style.animation = 'pop 0.3s ease';
+					break;
+				default:
+					modal.style.animation = 'fade 0.3s ease';
+			}
 			
 			// isSet置1，modal已经初始化
 			isSet = 1;
@@ -130,10 +128,8 @@
 			for (var key in callbacks) {
 				callback[key] = callbacks[key];
 			}
-			
-			/**
-			 * 通过修改display属性，显示模态框
-			 */
+
+			// 修改display，显示模态框
 			try{
 				document.getElementById('mask').style.display = 'flex';
 				document.getElementById('modal').style.display = 'flex';
@@ -160,9 +156,7 @@
 			document.getElementById('modal').style.display = 'none';
 		}
 	};
-	
-	/**
-	 * 将外部接口暴露出去
-	 */
+
+	// 将接口暴露给浏览器
 	this.Modal = api;
 })();
