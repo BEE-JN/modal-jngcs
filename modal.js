@@ -30,8 +30,8 @@
 		 * 初始化modal函数
 		 */
 		set: function(opts) {
-			
-			var options = defaultOptions;
+			// 利用json的转换实现指针的转换从而进行深度克隆，但是性能消耗增加
+			var options = JSON.parse(JSON.stringify(defaultOptions));
 
 			// 选项设置
 			for (var key in opts) {
@@ -66,6 +66,7 @@
 				modalMsg.style.lineHeight = '50px';
 			} else {
 				modalTitle.style.height = '32px';
+				modalMsg.style.lineHeight = '35px';
 				modalTitle.innerHTML = options.content_title;		
 			}
 			modalMsg.innerHTML = options.content_msg;
@@ -123,7 +124,8 @@
 				throw 'modal stop running';
 			}
 			
-			var callback = defaultCallback;
+			// 深度克隆
+			var callback = JSON.parse(JSON.stringify(defaultCallback));
 			
 			for (var key in callbacks) {
 				callback[key] = callbacks[key];
