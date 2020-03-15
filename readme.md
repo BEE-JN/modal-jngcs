@@ -24,7 +24,7 @@ The modal.js rely on pure js,you can run it without any frame.
    <link href="http://jngcs.top/common/modal/modal.min.css" rel="stylesheet" />
    ```
 
-3. copy code below in your html, then paste under the `<body>` element and only under the `<body>`
+3. copy code below in your html, then paste under the `<body>` element and must under the `<body>`
 
    ```html
    <!-- modal -->
@@ -120,7 +120,7 @@ modal.js provide className `.modal-btn-confirm` in confirm button.
 
 modal.js provide classNmae `.modal-btn-cancel` and `.modal-btn-confirm` .
 
- You can listen the events by className in your businesslogic like this:
+ You can listen the events by className in your business logic like this:
 
 ```javascript
 var cancelBtn = document.getElementsByClassName[0];
@@ -129,6 +129,31 @@ cancelBtn.addEventListener('click', function() {
     Modal.hide();
 })
 ```
+
+
+
+## Example
+
+```javascript
+// 在业务逻辑中显示模态框
+Modal.set({
+	type: 'confirm',
+	content_title: 'title',
+	content_msg: 'message',
+    animation: 'fade'
+}).show({
+	success: function(res) {
+		console.log(res);
+	},
+    fail: function(res) {
+        console.log(res);
+    }
+});
+
+// 监听模态框事件，在业务逻辑中关闭模态框
+Modal.hide();
+```
+
 
 
 
@@ -155,30 +180,6 @@ cancelBtn.addEventListener('click', function() {
 * If you use the default style, **don't** modify the html ans css in *Quict Start*.
 
 * call function `set()` **before** use `show()`,  otherwise the modal will not work.
-
-
-
-## Example
-
-```javascript
-// 在业务逻辑中显示模态框
-Modal.set({
-	type: 'confirm',
-	content_title: 'title',
-	content_msg: 'message',
-    animation: 'fade'
-}).show({
-	success: function(res) {
-		console.log(res);
-	},
-    fail: function(res) {
-        console.log(res);
-    }
-});
-
-// 监听模态框事件，在业务逻辑中关闭模态框
-Modal.hide();
-```
 
 
 
