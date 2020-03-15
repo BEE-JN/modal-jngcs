@@ -8,7 +8,7 @@ You can also make your own style modal whether the plugin's style.
 
 The modal.js rely on pure js,you can run it without any frame.
 
-
+[TOC]
 
 ## Quick Start
 
