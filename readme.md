@@ -1,10 +1,8 @@
 # modal.js Guidance
 
-<img src="https://img.shields.io/badge/Version-1.2%20Alpha-green" align=left>
+![](https://img.shields.io/badge/Version-1.2%20Alpha-green)
 
 [![](https://img.shields.io/badge/home-jngcs-blue)]( http://jngcs.top/common/modal/modal-jngcs.html ) 
-
-![](https://img.shields.io/badge/Version-1.2%20Alpha-green)
 
 modal.js is a mobile-browser plugin build with HTML CSS  and JavaScript.
 
