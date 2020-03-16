@@ -1,5 +1,9 @@
 # modal.js Guidance
 
+<img src="https://img.shields.io/badge/Version-1.2%20Alpha-green" align=left>
+
+[![](https://img.shields.io/badge/home-jngcs-blue)]( http://jngcs.top/common/modal/modal-jngcs.html ) 
+
 modal.js is a mobile-browser plugin build with HTML CSS  and JavaScript.
 
 It provide the ability to show the model in your mobile-browser, and listen the basic events.
@@ -8,7 +12,7 @@ You can also make your own style modal whether the plugin's style.
 
 The modal.js rely on pure js,you can run it without any frame.
 
-[TOC]
+
 
 ## Quick Start
 
