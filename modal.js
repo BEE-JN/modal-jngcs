@@ -153,9 +153,15 @@
 		 */
 		hide: function(callbacks) {
 			
+			// 设置离场动画
+			var outAnimation = document.getElementById('modal').style.animation + '-out';
+			document.getElementById('modal').style.animation = outAnimation;
+			
 			// 在显示模态框时已经进行过错误处理了，这里便不再获取错误
-			document.getElementById('mask').style.display = 'none';
-			document.getElementById('modal').style.display = 'none';
+			setTimeout(function() {
+				document.getElementById('mask').style.display = 'none';
+				document.getElementById('modal').style.display = 'none';
+			}, 230);
 		}
 	};
 
