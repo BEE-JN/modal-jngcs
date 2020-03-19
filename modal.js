@@ -151,13 +151,14 @@
 		 * @param {Object} callbacks 开发者重写回调函数
 		 * 关闭modal函数
 		 */
-		hide: function(callbacks) {
+		hide: function() {
 			
 			// 设置离场动画
-			var outAnimation = document.getElementById('modal').style.animation + '-out';
+			var animationName = document.getElementById('modal').style.animationName;
+			var outAnimation = animationName + '-out 0.3s ease';
 			document.getElementById('modal').style.animation = outAnimation;
 			
-			// 在显示模态框时已经进行过错误处理了，这里便不再获取错误
+			// 关闭模态框
 			setTimeout(function() {
 				document.getElementById('mask').style.display = 'none';
 				document.getElementById('modal').style.display = 'none';
