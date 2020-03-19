@@ -1,7 +1,5 @@
 # modal.js Guidance
 
-![](https://img.shields.io/badge/Version-1.2%20Alpha-green)
-
 [![](https://img.shields.io/badge/home-jngcs-blue)]( http://jngcs.top/common/modal/modal-jngcs.html ) 
 
 modal.js is a mobile-browser plugin build with HTML CSS  and JavaScript.
@@ -247,3 +245,7 @@ v1.3 Alpha(18/3/2020)
 * 新增modal离场动画
 * 优化modal圆角尺寸
 * 删除`hide()`函数的回调函数
+
+v1.4 Alpha(19/3/2020)
+
+* 修复真机情况下modal离场动画不起效的问题
