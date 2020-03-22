@@ -12,12 +12,6 @@
 		toast_time: 1500,  // toast显示市场，仅当type=toast时有效
 		animation: 'fade'  // modal显示关闭动画
 	};
-
-	// 默认回调函数
-	const defaultCallback = {
-		success: function(res) {},
-		fail: function(err) {console.error('fail callback：' + err);}
-	};
 	
 	// 用于判断在调用show之前，是否已经调用set初始化，0代表没，1代表已经初始化
 	var isSet = 0;
@@ -124,8 +118,11 @@
 				throw 'modal stop running';
 			}
 			
-			// 深度克隆
-			var callback = JSON.parse(JSON.stringify(defaultCallback));
+			// 换算无法用json转换，只能牺牲一点性能和空间了
+			var callback = {
+				success: function(res) {},
+				fail: function(err) {console.error('fail callback：' + err);}
+			}
 			
 			for (var key in callbacks) {
 				callback[key] = callbacks[key];
