@@ -17,13 +17,13 @@ The modal.js rely on pure js,you can run it without any frame.
 1. import js
 
    ```html
-   <script src="http://jngcs.top/common/modal/modal.min.js"></script>
+   <script src="https://jngcs.top/common/modal/modal.min.js"></script>
    ```
 
 2. import css
 
    ```html
-   <link href="http://jngcs.top/common/modal/modal.min.css" rel="stylesheet" />
+   <link href="https://jngcs.top/common/modal/modal.min.css" rel="stylesheet" />
    ```
 
 3. copy code below in your html, then paste under the `<body>` element and must under the `<body>`
@@ -251,3 +251,10 @@ v1.3 Alpha(18/3/2020)
 v1.4 Alpha(19/3/2020)
 
 * 修复真机情况下modal离场动画不起效的问题
+
+------
+
+v2.0 Beta(22/3/2020)
+
+* 修复了`show()`函数中回调函数深度复制后出错的问题
+* 版本迭代到Beta版
