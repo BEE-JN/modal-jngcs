@@ -125,8 +125,8 @@ modal.js provide classNmae `.modal-btn-cancel` and `.modal-btn-confirm` .
  You can listen the events by className in your business logic like this:
 
 ```javascript
-var cancelBtn = document.getElementsByClassName[0];
-cancelBtn.addEventListener('click', function() {
+var confirmBtn = document.getElementsByClassName('modal-btn-confirm')[0];
+confirmBtn.addEventListener('click', function() {
     // DO SOMETHING HERE
     Modal.hide();
 })
