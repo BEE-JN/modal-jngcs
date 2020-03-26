@@ -1,6 +1,6 @@
 # modal.js Guidance
 
-[![Build Status](https://travis-ci.org/michaelliao/openweixin.svg?branch=master)](https://www.travis-ci.org/github/BEE-JN/modal-jngcs)
+[![Build Status]( https://www.travis-ci.org/BEE-JN/modal-jngcs.svg?branch=master&status=passed )](https://www.travis-ci.org/github/BEE-JN/modal-jngcs)
 
 [![](https://img.shields.io/badge/home-jngcs-blue)]( http://jngcs.top/common/modal/modal-jngcs.html ) 
 
