@@ -4,6 +4,8 @@
   "description": "modal-jngcs",
   "main": "src/js/modal.js",
   "scripts": {
+    "build": "test",
+    "test": "echo \"no test specified\" && exit 0"
   },
   "keywords": [
     "modal-jngcs",
