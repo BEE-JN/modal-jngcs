@@ -2,7 +2,7 @@
   "name": "modal-jngcs",
   "version": "2.0.1",
   "description": "modal-jngcs",
-  "main": "modal.js",
+  "main": "src/js/modal.js",
   "scripts": {
   },
   "keywords": [
