@@ -1,0 +1,11 @@
+{
+  "name": "webpack",
+  "version": "2.0.1",
+  "description": "modal-jngcs",
+  "main": "modal.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jngcs",
+  "license": "ISC"
+}
