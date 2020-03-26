@@ -1,5 +1,7 @@
 # modal.js Guidance
 
+[![Build Status](https://travis-ci.org/michaelliao/openweixin.svg?branch=master)](https://www.travis-ci.org/github/BEE-JN/modal-jngcs)
+
 [![](https://img.shields.io/badge/home-jngcs-blue)]( http://jngcs.top/common/modal/modal-jngcs.html ) 
 
 modal.js is a mobile-browser plugin build with HTML CSS  and JavaScript.
@@ -212,27 +214,27 @@ Modal.hide();
 
 ## Update Notes
 
-v0.2 Alpha(13/3/2020): 
+v0.0.2 Alpha(13/3/2020): 
 
 * 新增错误捕获功能
 * 删除`show()`函数的默认成功回调函数内部功能
 
 ------
 
-v0.3 Alpha(13/3/2020): 
+v0.0.3 Alpha(13/3/2020): 
 
 * 新增链式调用顺序要求
 
 ------
 
-v1.1 Alpha(14/3/2020):
+v0.1.1 Alpha(14/3/2020):
 
 * 新增动画效果
 * 修复同一页面下存在有或无标题的两种模态框情况下，导致消息高度变化的问题
 
 ------
 
-v1.2 Alpha(15/3/2020):
+v0.1.2 Alpha(15/3/2020):
 
 * 修复mask动画短暂黑屏的问题
 * 修复由于未对对象进行深度复制导致内容异常的问题
@@ -240,7 +242,7 @@ v1.2 Alpha(15/3/2020):
 
 ------
 
-v1.3 Alpha(18/3/2020)
+v0.1.3 Alpha(18/3/2020)
 
 * 新增modal离场动画
 * 优化modal圆角尺寸
@@ -248,13 +250,13 @@ v1.3 Alpha(18/3/2020)
 
 ------
 
-v1.4 Alpha(19/3/2020)
+v0.1.4 Alpha(19/3/2020)
 
 * 修复真机情况下modal离场动画不起效的问题
 
 ------
 
-v2.0 Beta(22/3/2020)
+v0.2.0 Beta(22/3/2020)
 
 * 修复了`show()`函数中回调函数深度复制后出错的问题
 * 版本迭代到Beta版
