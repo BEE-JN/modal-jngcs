@@ -19,6 +19,7 @@ The modal.js rely on pure js,you can run it without any frame.
 1. import js
 
    ```html
+   <!-- v0需要粘贴html，v1不需要粘贴html，两者不互相兼容 -->
    <!-- v0.x.x -->
    <script src="https://jngcs.top/common/modalv0/modal.min.js"></script>
    <!-- v1.x.x -->
@@ -164,6 +165,7 @@ Modal.set({
 }).show({
 	success: function(res) {
 		console.log(res);
+        // 监听modal.js提供的按钮class，并执行业务，最后关闭modal
         var confirmBtn = document.getElementsByClassName('modal-btn-confirm')[0];
 		confirmBtn.addEventListener('click', function() {
     		// DO SOMETHING HERE
@@ -172,11 +174,11 @@ Modal.set({
 	},
     fail: function(res) {
         console.log(res);
+        // ...
+        Modal.hide();
     }
 });
 
-// 监听模态框事件，在业务逻辑中关闭模态框
-Modal.hide();
 ```
 
 
@@ -202,7 +204,7 @@ Modal.hide();
 
   make sure **not** to use them in other place.
 
-* If you use the default style, **don't** modify the html ans css in *Quict Start*.
+* If you use the default style, **don't** modify the html and css in *Quict Start*.
 
 * Call function `set()` **before** use `show()`,  otherwise the modal will not work.
 
