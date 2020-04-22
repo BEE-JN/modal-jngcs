@@ -161,7 +161,7 @@ Modal.set({
 	type: 'alert',
 	content_title: 'title',
 	content_msg: 'message',
-    animation: 'fade'
+    	animation: 'fade'
 }).show({
 	success: function(res) {
 		console.log(res);
