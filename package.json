@@ -2,9 +2,8 @@
   "name": "modal-jngcs",
   "version": "2.0.1",
   "description": "modal-jngcs",
-  "main": "src/js/modal.js",
+  "main": "src/js/modalv1.js",
   "scripts": {
-    "build": "test",
     "test": "echo \"no test specified\" && exit 0"
   },
   "keywords": [
@@ -13,5 +12,5 @@
     "jngcs"
   ],
   "author": "jngcs",
-  "license": "ISC"
+  "license": "MIT"
 }
