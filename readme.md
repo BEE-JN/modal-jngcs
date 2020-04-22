@@ -19,7 +19,10 @@ The modal.js rely on pure js,you can run it without any frame.
 1. import js
 
    ```html
-   <script src="https://jngcs.top/common/modal/modal.min.js"></script>
+   <!-- v0.x.x -->
+   <script src="https://jngcs.top/common/modalv0/modal.min.js"></script>
+   <!-- v1.x.x -->
+   <script src="https://jngcs.top/common/modalv1/modal.min.js"></script>
    ```
 
 2. import css
@@ -28,7 +31,9 @@ The modal.js rely on pure js,you can run it without any frame.
    <link href="https://jngcs.top/common/modal/modal.min.css" rel="stylesheet" />
    ```
 
-3. copy code below in your html, then paste under the `<body>` element and must under the `<body>`
+3. if you use *modalv0*, copy code below, then paste under the `<body>` element and must under the `<body>`
+
+   if you use *modalv1*, you needn't copy the html.
 
    ```html
    <!-- modal -->
@@ -67,7 +72,7 @@ The modal.js rely on pure js,you can run it without any frame.
 | Property      | Type   | Default value | Description                     |
 | ------------- | ------ | ------------- | ------------------------------- |
 | type          | string | toast         | modal type.                     |
-| content_title | string |               | modal title.                    |
+| content_title | string | none          | modal title.                    |
 | content_msg   | string |               | modal content message.          |
 | cancel_text   | string | 取消          | text of cancel button.          |
 | confirm_text  | string | 确定          | text of confirm button.         |
@@ -152,13 +157,18 @@ Remember to use `mui().off()`to cancel the listener after your work, or the code
 ```javascript
 // 在业务逻辑中显示模态框
 Modal.set({
-	type: 'confirm',
+	type: 'alert',
 	content_title: 'title',
 	content_msg: 'message',
     animation: 'fade'
 }).show({
 	success: function(res) {
 		console.log(res);
+        var confirmBtn = document.getElementsByClassName('modal-btn-confirm')[0];
+		confirmBtn.addEventListener('click', function() {
+    		// DO SOMETHING HERE
+    		Modal.hide();
+		})
 	},
     fail: function(res) {
         console.log(res);
@@ -260,3 +270,11 @@ v0.2.0 Beta(22/3/2020)
 
 * 修复了`show()`函数中回调函数深度复制后出错的问题
 * 版本迭代到Beta版
+
+------
+
+v1.0.0 Beta (22/4/2020)
+
+* 新增页面dom监听，动态插入modal元素，不用再粘贴html代码。
+* 由于dom的监听事件，不再支持IE8以下浏览器。
+* 1.0.0版本为大版本更新，不向前兼容。
