@@ -1,3 +1,7 @@
+/*!
+ * Copyright (c) 2020 jngcs
+ * Distributed under MIT license
+ */
 ;
 document.addEventListener('DOMContentLoaded', function() {
 	(function() {
